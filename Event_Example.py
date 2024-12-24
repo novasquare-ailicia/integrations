@@ -4,7 +4,7 @@ import os
 import sys
 
 # API endpoint and headers
-url = "https://api.ailicia.live/v1/events"
+url = "https://api.getailicia.com/v1/events"
 headers = {
     "Authorization": "YOUR_API_KEY",  # Replace with your API key
     "Content-Type": "application/json"
