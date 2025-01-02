@@ -19,12 +19,15 @@ Explore the possibilities with ai_licia's [public API documentation](https://doc
 ai_licia scripts are written in **JavaScript** and require an environment to execute. Here are some recommended tools:
 
 #### Streamer.bot
-- **Integration**: Streamer.bot is a popular platform for automating streaming workflows and can run JavaScript scripts.
+- **Integration**: Streamer.bot is a popular platform for automating streaming workflows and supports both JavaScript and Python scripts.
 - **Setup**:
-    1. Install Streamer.bot and navigate to the `Actions` tab.
-    2. Create a new action and choose `Add Sub-Action > Execute Code`.
-    3. Paste your JavaScript code and configure it to trigger based on your desired event.
-
+    1. Create an action for the event.
+    2. Choose the Trigger (recommended is Twitch -> Channel Reward -> Reward Redemption).
+    3. Create a Sub-Action: Core -> System -> Run a Program.
+        - **Target**: `pythonw.exe`
+        - **Working Directory**: The folder containing the script.
+        - **Arguments**: The name of the script followed by Streamer.bot variables, formatted as: `"%variableName%" "%variableName2%"`.
+    4. Click OK and run the Action whichever way you decided!
 #### Tampermonkey
 - **Integration**: Tampermonkey is a browser extension that allows you to run custom JavaScript scripts on specific web pages.
 - **Setup**:
